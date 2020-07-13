@@ -20,6 +20,10 @@ function App() {
         <Button btnType={ButtonType.Link} href="baidu.com">
           hello
         </Button>
+
+        <Button btnType={ButtonType.Primary} disable href="baidu.com">
+          hello
+        </Button>
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
