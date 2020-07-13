@@ -6,6 +6,11 @@ function App() {
   if(a === '222'){
     console.log(a);
   }
+
+  const handleClick = () => {
+    alert(1);
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -13,9 +18,10 @@ function App() {
           hello
         </Button>
 
-        <Button btnType={ButtonType.Primary} size={ButtonSize.Large}>
+        <Button onClick={handleClick} btnType={ButtonType.Primary} size={ButtonSize.Large}>
           hello
         </Button>
+
 
         <Button btnType={ButtonType.Link} href="baidu.com">
           hello

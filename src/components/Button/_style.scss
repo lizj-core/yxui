@@ -23,5 +23,13 @@
 }
 
 .btn-lg {
-    @include button-size($btn-padding-y-lg, $btn-padding-x,  $btn-font-size, $border-radius);
+    @include button-size($btn-padding-y-lg, $btn-padding-x-lg,  $btn-font-size-lg, $border-radius-lg);
+}
+
+.btn-sm {
+    @include button-size($btn-padding-y-sm, $btn-padding-x-sm,  $btn-font-size-sm, $border-radius-sm);
+}
+
+.btn-primary{
+    @include button-type($primary, $primary, $white)
 }
