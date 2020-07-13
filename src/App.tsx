@@ -1,5 +1,6 @@
 import React from 'react';
 import Button, { ButtonType, ButtonSize } from './components/Button/button';
+import Alert, { AlertType } from './components/Alert/alert';
 
 function App() {
   const a = '222';
