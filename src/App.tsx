@@ -1,10 +1,9 @@
 import React from 'react';
-import logo from './logo.svg';
 import Button, { ButtonType, ButtonSize } from './components/Button/button';
 
 function App() {
   const a = '222';
-  if(a == '222'){
+  if(a === '222'){
     console.log(a);
   }
   return (

@@ -1,6 +1,5 @@
 import React from 'react';
 import classNames from 'classnames';
-import { booleanTypeAnnotation } from '@babel/types';
 
 export enum ButtonSize {
     Large = 'lg',
