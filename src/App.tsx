@@ -31,6 +31,7 @@ function App() {
         <Button btnType={ButtonType.Primary} disable href="baidu.com">
           hello
         </Button>
+        <Alert type={AlertType.Success} title="title"  isClose />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
