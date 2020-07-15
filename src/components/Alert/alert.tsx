@@ -9,7 +9,7 @@ export enum AlertType {
 }
 
 interface BaseAlertProps {
-    type: string;
+    type?: string;
     isClose?: boolean;
     className?: string;
     title?: string;
@@ -20,12 +20,22 @@ const Alert: React.FC<BaseAlertProps> = (props) => {
     const {
         className,
         type,
+        title,
+        describe,
+        isClose
     } = props;
-    const classes = classNames(className, {
+    const classes = classNames('alert', className, {
         [`alter-${type}`]: type,
     })
     return (
         <div className={classes}>
+            <div>
+                <div>{title}</div>
+                <div>{describe}</div>
+            </div>
+            {isClose && (
+                <div>关闭</div>
+            )}
         </div>
     )
 }

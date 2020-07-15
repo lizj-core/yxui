@@ -7,8 +7,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <div>
-          <Button>
+        
+        <Button>
             hello
         </Button>
 
@@ -24,9 +24,11 @@ function App() {
           <Button btnType={ButtonType.Primary} disable href="baidu.com">
             hello
         </Button>
-        </div>
-        <br />
-        <Alert type={AlertType.Success} />
+        <Alert type={AlertType.Success} title="title"  isClose />
+        <p>
+          Edit <code>src/App.tsx</code> and save to reload.
+        </p>
+
       </header>
     </div>
   );
