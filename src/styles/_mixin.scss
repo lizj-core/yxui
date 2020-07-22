@@ -4,8 +4,7 @@
     border-radius: $border-raduis;
 }
 
-@mixin button-type(
-    $background,
+@mixin button-type($background,
     $border,
     $color,
     $hover-background: lighten($background, 7.5%),
@@ -15,17 +14,20 @@
     background: $background;
     border-color: $border;
     color: $color;
-    &:hover{
+
+    &:hover {
         background: $hover-background;
         border-color: $hover-border;
         color: $hover-color;
     }
+
     &:focus,
     &.focus {
         background: $hover-background;
         border-color: $hover-border;
         color: $hover-color;
     }
+
     &:disabled,
     &.disabled {
         background: $background;

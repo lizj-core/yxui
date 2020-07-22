@@ -7,24 +7,22 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        
+
         <Button>
-            hello
+          hello
         </Button>
 
-          <Button btnType={ButtonType.Primary} size={ButtonSize.Large}>
-            hello
+        <Button btnType={ButtonType.Primary} size={ButtonSize.Large}>
+          hello
+        </Button>
+        <Button btnType={ButtonType.Link} href="baidu.com">
+          hello
         </Button>
 
-
-          <Button btnType={ButtonType.Link} href="baidu.com">
-            hello
+        <Button btnType={ButtonType.Primary} disable href="baidu.com">
+          hello
         </Button>
-
-          <Button btnType={ButtonType.Primary} disable href="baidu.com">
-            hello
-        </Button>
-        <Alert type={AlertType.Success} title="title"  isClose />
+        <Alert type={AlertType.Success} title="title" isClose />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>

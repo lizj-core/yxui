@@ -25,7 +25,7 @@ const Alert: React.FC<BaseAlertProps> = (props) => {
         isClose
     } = props;
     const classes = classNames('alert', className, {
-        [`alter-${type}`]: type,
+        [`alert-${type}`]: type,
     })
     return (
         <div className={classes}>
