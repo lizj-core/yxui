@@ -1,0 +1,29 @@
+import React from 'react';
+import classNames from 'classnames';
+
+export interface MenuItemProps {
+    index?: number;
+    disable?: boolean;
+    className?: string;
+    style?: React.CSSProperties;
+}
+
+const MenuItem: React.FC<MenuItemProps> = (props) => {
+    const { 
+        children,
+        index,
+        className,
+        style,
+        disable,
+    } = props;
+    const classes = classNames('menu-item', className, {
+        'is-disable': disable,
+    })
+    return (
+        <li className={classes} style={style}>
+            {children}
+        </li>
+    )
+}
+
+export default MenuItem;
