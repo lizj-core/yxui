@@ -1,5 +1,5 @@
 import React from 'react';
-import Button, { ButtonType, ButtonSize } from './components/Button/button';
+import Button from './components/Button/button';
 import Alert, { AlertType } from './components/Alert/alert';
 import Menu from './components/Menu/menu';
 import MenuItem from './components/Menu/menuItem';
@@ -24,16 +24,16 @@ function App() {
             hello
         </Button>
 
-          <Button btnType={ButtonType.Primary} size={ButtonSize.Large}>
+          <Button btnType='primary' size="lg">
             hello
         </Button>
 
 
-          <Button btnType={ButtonType.Link} href="baidu.com">
+          <Button btnType="link" href="baidu.com">
             hello
         </Button>
 
-          <Button btnType={ButtonType.Primary} disable href="baidu.com">
+          <Button btnType="primary" disable href="baidu.com">
             hello
         </Button>
         <Alert type={AlertType.Success} title="title"  isClose />

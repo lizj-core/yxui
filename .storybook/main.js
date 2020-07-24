@@ -5,6 +5,7 @@ module.exports = {
     '@storybook/preset-create-react-app',
     '@storybook/addon-actions',
     '@storybook/addon-links',
+    '@storybook/addon-actions/register',
   ],
   webpackFinal: async config => {
     config.module.rules.push({

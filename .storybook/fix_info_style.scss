@@ -1,20 +1,3 @@
-// config
-@import "variables";
-
-// layout
-@import "reboot";
-
-//mixin
-@import "mixin";
-
-// button
-@import "../components/Button/style";
-
-// alert
-@import "../components/Alert/style";
-
-
-// TODO addons插件表格样式不显示问题
 .info-table {
   width: 100%;
 }
