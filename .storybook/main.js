@@ -14,9 +14,18 @@ module.exports = {
           loader: require.resolve('ts-loader'),
         },
         // Optional
-        // {
-        //   loader: require.resolve('react-docgen-typescript-loader'),
-        // },
+        {
+          loader: require.resolve("react-docgen-typescript-loader"),
+          options: {
+            shouldExtractLiteralValuesFromEnum: true,
+            propFilter: (prop) => {
+              if (prop.parent) {
+                return !prop.parent.fileName.includes('node_modules')
+              }
+              return true            
+            }
+          }
+        }
       ],
     });
     config.resolve.extensions.push('.ts', '.tsx');

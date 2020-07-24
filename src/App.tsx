@@ -20,22 +20,23 @@ function App() {
             link3
           </MenuItem>
         </Menu>
-
         <Button>
-          hello
+            hello
         </Button>
 
-        <Button btnType={ButtonType.Primary} size={ButtonSize.Large}>
-          hello
-        </Button>
-        <Button btnType={ButtonType.Link} href="baidu.com">
-          hello
+          <Button btnType={ButtonType.Primary} size={ButtonSize.Large}>
+            hello
         </Button>
 
-        <Button btnType={ButtonType.Primary} disable href="baidu.com">
-          hello
+
+          <Button btnType={ButtonType.Link} href="baidu.com">
+            hello
         </Button>
-        <Alert type={AlertType.Success} title="title" isClose />
+
+          <Button btnType={ButtonType.Primary} disable href="baidu.com">
+            hello
+        </Button>
+        <Alert type={AlertType.Success} title="title"  isClose />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
