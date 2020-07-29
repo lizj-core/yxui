@@ -49,10 +49,9 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-
   "husky": {
     "hooks": {
-      "pre-commit": "npm test:nowatch && npm run lint"
+      "pre-commit": "npm run test:nowatch && npm run lint"
     }
   },
   "browserslist": {

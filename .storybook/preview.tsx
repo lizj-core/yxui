@@ -1,4 +1,4 @@
-import { addDecorator, addParameters } from '@storybook/react';
+import { addDecorator, addParameters, configure } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 import '../src/styles/index.scss'
 import React from 'react';
@@ -13,7 +13,9 @@ const centerDecorator = (storyFn: any) => (
     <h4>组件演示</h4>
     {storyFn()}
   </div>
-)
+);
+
+
 addDecorator(centerDecorator); 
 addDecorator(withInfo); 
 addParameters({
@@ -22,3 +24,12 @@ addParameters({
     header: false,
   }
 })
+
+const loaderFn = () => {
+  const allExports = [require('../src/welcome.stories.tsx')];
+  const req = require.context('../src/components', true, /\.stories\.tsx$/);
+  req.keys().forEach(fname => allExports.push(req(fname)));
+  return allExports;
+};
+
+configure(loaderFn, module);
