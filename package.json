@@ -44,7 +44,7 @@
     "clean": "rimraf ./dist",
     "lint": "eslint --ext js,ts,tsx src --max-warnings 5",
     "test:nowatch": "cross-env CI=true react-scripts test",
-    "prepublishonly": "npm run build"
+    "prepublishOnly": "npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"
