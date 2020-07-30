@@ -1,6 +1,9 @@
 language: node_js
 node_js:
-  - stable
+  - "stable"
 cache:
-  npm: false
+  directories:
+     - node_modules
+env:
+  - CI=true
     
