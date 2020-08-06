@@ -1,26 +1,25 @@
-## Vikingship component library
-## 使用 React+typescript 从零到一打造一套你自己的组件库
 
-[![Build Status](https://travis-ci.com/vikingmute/vikingship.svg?token=mHoDqxyxXWX5BSpu8L9y&branch=master)](https://travis-ci.com/vikingmute/vikingship)
+
+[![Build Status](https://www.travis-ci.com/lizj-core/yxui.svg?branch=master)](https://github.com/lizj-core/yxui)
 
 vikingship 是为慕课网打造的一套教学组件库，使用 React Hooks 和 typescript
 意在让大家从零到一，由浅入深的提高自己的 React 和 typescript 水平，它的官网地址是
-[vikingship.xyz](http://vikingship.xyz)
+[lizj-core/yxui](https://github.com/lizj-core/yxui)
 
 
 ### 安装最后已经发布的组件库来试试
 
 ~~~javascript
-npm install vikingship --save
+npm install yxui --save
 ~~~
 
 ### 使用
 
 ~~~javascript
 // 加载样式
-import 'vikingship/dist/index.css'
+import 'yxui/dist/index.css'
 // 引入组件
-import { Button } from 'vikingship'
+import { Button } from 'yxui'
 ~~~
 
 ### 课程亮点

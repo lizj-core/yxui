@@ -2,7 +2,7 @@
   "name": "yxui",
   "version": "0.1.0",
   "description": "React components library",
-  "author": "Viking Zhang",
+  "author": "lzj",
   "private": false,
   "main": "dist/index.js",
   "module": "dist/index.js",
