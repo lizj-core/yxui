@@ -1,38 +1,33 @@
 // config
 @import "variables";
 
-// layout
+//layout
 @import "reboot";
 
 //mixin
 @import "mixin";
 
+// animation
+@import "animation";
 // button
+
 @import "../components/Button/style";
 
-// alert
-@import "../components/Alert/style";
+// menu
 
+@import "../components/Menu/style";
 
-// TODO addons插件表格样式不显示问题
-.info-table {
-  width: 100%;
-}
+// icon
+@import "../components/Icon/style";
 
-.info-table,
-.info-table td,
-.info-table th {
-  border-collapse: collapse;
-  border: 1px solid #cccccc;
-  color: #444444;
-  margin-top: 0.25rem;
-  padding-right: 0.5rem;
-  padding: 0.25rem;
-  text-align: left;
-  vertical-align: top;
-}
+//input
+@import "../components/Input/style";
 
-.info-table-monospace {
-  font-family: Menlo, Monaco, "Courier New", monospace;
-  font-size: 0.88em;
-}
+//auto-complete
+@import "../components/AutoComplete/style";
+
+//upload
+@import "../components/Upload/style";
+
+//progress
+@import "../components/Progress/style";
