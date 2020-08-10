@@ -2,9 +2,6 @@
 
 [![Build Status](https://www.travis-ci.com/lizj-core/yxui.svg?branch=master)](https://github.com/lizj-core/yxui)
 
-vikingship 是为慕课网打造的一套教学组件库，使用 React Hooks 和 typescript
-意在让大家从零到一，由浅入深的提高自己的 React 和 typescript 水平，它的官网地址是
-[lizj-core/yxui](https://github.com/lizj-core/yxui)
 
 
 ### 安装最后已经发布的组件库来试试
