@@ -6,7 +6,7 @@ storiesOf('Welcome page', module)
     return (
       <>
         <code>
-          npm install yxui --save
+          npm install yuexun-ui --save
         </code>
       </>
     )

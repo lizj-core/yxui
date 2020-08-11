@@ -21,7 +21,7 @@ export type ButtonProps = Partial<NativeButtonProps & AnchorButtonProps>
 /**
  * 
  * ~~~js
- * import { Button } from 'vikingship'
+ * import { Button } from 'yuexun-ui'
  * ~~~
  */
 export const Button: FC<ButtonProps> = (props) => {
