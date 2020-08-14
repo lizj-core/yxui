@@ -27,6 +27,7 @@
     "@fortawesome/react-fontawesome": "^0.1.8",
     "axios": "^0.19.1",
     "classnames": "^2.2.6",
+    "rc-dialog": "^8.1.0",
     "react-transition-group": "^4.3.0"
   },
   "peerDependencies": {
@@ -43,7 +44,7 @@
     "eject": "react-scripts eject",
     "build-ts": "tsc -p tsconfig.build.json",
     "build-css": "node-sass ./src/styles/index.scss ./dist/index.css",
-    "storybook": "start-storybook -p 9009 -s public",
+    "storybook": "start-storybook -p 9009 -s public ",
     "build-storybook": "build-storybook -s public",
     "prepublishOnly": "npm run test:nowatch && npm run lint && npm run build"
   },

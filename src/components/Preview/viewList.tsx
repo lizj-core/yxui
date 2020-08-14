@@ -1,22 +1,22 @@
 import React, { FC } from 'react';
-import Icon from '../../components/Icon';
+import ViewListItem from './viewListItem';
 
 interface BasePorps {
   data: any[];
   href?: string;
   className?: string;
+  handlePreview?: () => void;
+  customPreview?: () => void;
 }
 
 export const ViewList: FC<BasePorps> = (props) => {
-  const { data } = props;
+  const { data, handlePreview, customPreview } = props;
+
   return (
     <div>
       {(data || []).map(item => {
         return (
-          <div className="item">
-            <Icon icon="link" />
-            <span style={{paddingLeft:'10px'}}>{item ? item.fileName : ''}</span>
-          </div>
+          <ViewListItem key={item.fileUuid} fileName={item.fileName} fileUuid={item.fileUuid} />
         )
       })}
       

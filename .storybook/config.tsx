@@ -9,6 +9,8 @@ const wrapperStyle: React.CSSProperties = {
   padding: '20px 40px'
 }
 
+console.log(process)
+
 const storyWrapper = (stroyFn: any) => (
   <div style={wrapperStyle}>
     <h3>组件演示</h3>
@@ -17,7 +19,14 @@ const storyWrapper = (stroyFn: any) => (
 )
 addDecorator(storyWrapper)
 addDecorator(withInfo)
-addParameters({info: { inline: true, header: false}})
+addParameters({
+  info: { inline: true, header: false},
+  options: {
+    theme: {
+      brandTitle: 'yuexun组件库',
+    }
+  }
+})
 const loaderFn = () => {
   const allExports = [require('../src/welcome.stories.tsx')];
   const req = require.context('../src/components', true, /\.stories\.tsx$/);
