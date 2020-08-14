@@ -8,9 +8,33 @@
     color: $primary;
     font-size: 13px;
     cursor: pointer;
+
     svg {
       font-size: 12px;
     }
+  }
+
+  .item:hover {
+    background-color: rgb(242, 242, 242);
+  }
+}
+
+.yuexun-preview-picture {
+  display: flex;
+
+  .item {
+    width: 100px;
+    height: 100px;
+    padding: 4px;
+    border-radius: $border-radius;
+    border: 1px solid $border-color;
+    cursor: pointer;
+    margin: 0 10px 10px 0;
+  }
+
+  .item>img {
+    width: 100%;
+    height: 100%;
   }
 
   .item:hover {

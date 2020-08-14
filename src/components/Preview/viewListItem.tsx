@@ -1,22 +1,23 @@
-import React, { FC, useState } from 'react';
+import React, { FC } from 'react';
 import Icon from '../../components/Icon';
 
 interface ViewListItemProps {
-  fileName: string;
-  fileUuid: string;
+  fileName?: string;
+  fileUuid?: string;
   href?: string;
   customPreview?: () => any;
+  previewUrl?: string;
 }
 
 const ViewListItem: FC<ViewListItemProps> = (props) => {
 
-  const { fileUuid, fileName, customPreview, href } = props;
+  const { fileName, customPreview, previewUrl } = props;
 
   const handleClick = () => {
     if (customPreview) {
       customPreview();
-    } else if (href) {
-      window.open(href, '_blank')
+    } else if (previewUrl) {
+      window.open(previewUrl, '_blank')
     }
   }
   return (

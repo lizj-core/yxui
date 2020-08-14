@@ -1,79 +1,89 @@
-import React, { FC, CSSProperties, useState } from 'react';
-import ViewList from './viewList';
+import React, { FC, CSSProperties } from 'react';
 import classNames from 'classnames';
+import ViewListItem from './viewListItem';
+import PictureListItem from './pictureListItem';
 // var Dialog = require('rc-dialog');
-import Dialog from 'rc-dialog'
 
 export type type = 'list' | 'picture';
 
+class Object {
+  fileUuid?: string;
+  fileName?: string;
+  previewUrl?: string;
+}
+
 interface PreviewProps {
   href?: string;
-  data: any[];
+  /**
+   object: {
+     fileUuid: string;
+     fileName: string;
+     previewUrl: string;
+   }
+   */
+  data: Array<Object>;
   type?: type;
   className?: string;
   style?: CSSProperties;
   isUpdate?: boolean;
   /**删除文件时回调 */
-  // removeCallback?: (index: number) => any;
+  removeCallback?: () => any;
+  /**预览url */
   previewUrl?: string;
   /**自定义预览文件 */
   customPreview?: () => void;
 }
 
 export const Preview: FC<PreviewProps> = (props) => {
-  const [visible, setVisible] = useState(false);
-
-  const handlePreview = () => {
-    setVisible(!visible);
-  }
-
-  const renderPreviewType = () => {
-    if (type === 'picture') {
-      return (
-        <div className={classes} style={style}>
-          <ViewList
-            className={classes} 
-            data={data} 
-            href={href} 
-            handlePreview={handlePreview}
-           />
-        </div>
-      )
-    } else {
-      return (
-        <div className={classes} style={style}>
-          <ViewList handlePreview={handlePreview} className={classes} data={data} href={href} />
-        </div>
-      )
-    }
-  }
-
-  const handleClose = () => {
-    setVisible(false)
-  }
-
-  const { 
+  const {
     className,
     type,
-    href,
     style,
     data,
+    customPreview,
+    // isUpdate,
   } = props;
+
   const classes = classNames('yuexun-preview', className, {
     [`yuexun-preview-${type}`]: type,
   });
+
+  const renderPreviewType = () => {
+    console.log(data);
+    
+    return (
+      <div className={classes} style={style}>
+        {data.map((item, index) => {
+          if (type === "picture") {
+            return (
+              <PictureListItem
+                customPreview={customPreview}
+                fileName={item.fileName}
+                fileUuid={item.fileUuid}
+                key={index}
+                previewUrl={item.previewUrl}
+              />
+            )
+          } else {
+            return (
+              <ViewListItem
+                fileName={item.fileName}
+                fileUuid={item.fileUuid}
+                key={index}
+                customPreview={customPreview}
+                previewUrl={item.previewUrl}
+              />
+            )
+          }
+
+        })}
+      </div>
+    )
+  }
+
   return (
     <div>
       {renderPreviewType()}
-      {visible && (
-        <Dialog
-          title="tt"
-          visible={visible}
-          onClose={() => handleClose()}
-        >
-          <p>first dialog</p>
-        </Dialog>
-      )}
     </div>
   )
 }
