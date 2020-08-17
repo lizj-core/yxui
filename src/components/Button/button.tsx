@@ -1,4 +1,4 @@
-import React, { FC, ButtonHTMLAttributes, AnchorHTMLAttributes } from 'react'
+import React, { FC, ButtonHTMLAttributes, AnchorHTMLAttributes, ReactNode } from 'react'
 import classNames from 'classnames'
 
 export type ButtonSize = 'lg' | 'sm'
@@ -12,7 +12,7 @@ interface BaseButtonProps {
   size?: ButtonSize;
   /**设置 Button 的类型 */
   btnType?: ButtonType;
-  children: React.ReactNode;
+  children: ReactNode;
   href?: string;
 }
 type NativeButtonProps = BaseButtonProps & ButtonHTMLAttributes<HTMLElement>

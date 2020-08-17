@@ -22,7 +22,7 @@ const ViewListItem: FC<ViewListItemProps> = (props) => {
   }
   return (
     <div onClick={() => handleClick()} className="item">
-      <Icon icon="link" />
+      <Icon icon="file" />
       <span style={{ paddingLeft: '6px' }}>{fileName}</span>
     </div>
   )
