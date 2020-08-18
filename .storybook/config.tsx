@@ -23,8 +23,8 @@ addParameters({
   info: { inline: true, header: false},
   options: {
     theme: {
-      brandTitle: 'yuexun组件库',
-      brandUrl: 'https://github.com/lizj-core/yxui',
+      brandTitle: 'yuexun-ui',
+      base: 'https://github.com/lizj-core/yxui'
       // icon: 'http://192.168.10.89/fs/api/v1.0/viewPic.file?fileUuid=00b0k7t292017adbb72475abec0df44488f1399',
       // toolbar: {
       //   icon: 'http://192.168.10.89/fs/api/v1.0/viewPic.file?fileUuid=00b0k7t292017adbb72475abec0df44488f1399',

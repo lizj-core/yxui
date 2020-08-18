@@ -1,4 +1,4 @@
-import React, { FC, useState, ReactNode } from 'react';
+import React, { FC, useState } from 'react';
 import { storiesOf } from '@storybook/react';
 import ScrollList from './scrollList';
 
@@ -6,7 +6,7 @@ const style = {
   height: "30px",
   border: "1px solid green",
   margin: "6px",
-  padding: "8px",
+  paddingLeft: "8px",
 };
 // const fetchMoreData = () => {
 //   console.log(data)
@@ -24,7 +24,7 @@ const DefaultComponent: FC = (props) => {
     setTimeout(() => {
       setData(data.concat(Array.from({ length: 20 })))
 
-    }, 1500);
+    }, 500);
   };
 
   return (
@@ -41,7 +41,7 @@ const DefaultComponent: FC = (props) => {
           </div>
         ))}
       </ScrollList>
-      <h1>jie</h1>
+      <h1>底部</h1>
     </div>
 
   )
@@ -51,5 +51,5 @@ const test = () => {
   return <DefaultComponent />
 }
 
-storiesOf("scrollList下拉加载更多", module)
-  .add("下拉加载更多", test)
+storiesOf("scrollList上拉加载更多", module)
+  .add("上拉到底加载更多", test)

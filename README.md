@@ -4,7 +4,7 @@
 
 
 
-### 安装最后已经发布的组件库来试试
+### 安装组件库试试
 
 ~~~javascript
 npm install yuexun-ui --save
