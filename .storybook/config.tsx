@@ -24,7 +24,7 @@ addParameters({
   options: {
     theme:{
       base: "light",
-      brandTitle: 'yuexun组件库',
+      brandTitle: 'yuexun-ui',
       brandUrl: 'https://github.com/lizj-core/yxui',
     }
   }

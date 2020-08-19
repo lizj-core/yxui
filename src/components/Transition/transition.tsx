@@ -2,13 +2,18 @@ import React from 'react'
 import { CSSTransition } from 'react-transition-group'
 import { CSSTransitionProps } from 'react-transition-group/CSSTransition'
 
-type AnimationName = 'zoom-in-top' | 'zoom-in-left' | 'zoom-in-bottom' | 'zoom-in-right'
-
+export type AnimationName = 'zoom-in-top' | 'zoom-in-left' | 'zoom-in-bottom' | 'zoom-in-right'
 type TransitionProps = CSSTransitionProps & {
+  /**显示隐藏的方向 */
   animation?: AnimationName,
+  /**是否套一层div */
   wrapper? : boolean,
+  in: boolean,
 }
 
+/**
+ * import { Transition } from 'yuexun-ui'
+ */
 const Transition: React.FC<TransitionProps> = (props) => {
   const {
     children,
@@ -17,6 +22,7 @@ const Transition: React.FC<TransitionProps> = (props) => {
     wrapper,
     ...restProps
   } = props
+  
   return (
     <CSSTransition
       classNames = { classNames ? classNames : animation}
@@ -26,6 +32,7 @@ const Transition: React.FC<TransitionProps> = (props) => {
     </CSSTransition>
   )
 }
+
 Transition.defaultProps = {
   unmountOnExit: true,
   appear: true,

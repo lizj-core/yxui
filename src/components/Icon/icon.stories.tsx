@@ -1,11 +1,23 @@
 import { storiesOf } from '@storybook/react';
 import React from 'react';
+import md from './icon.md';
 
 import Icon from './icon';
 
 const IconFunc = () => {
-  return <Icon icon="address-book" />
+  return (
+    <div>
+      <Icon icon="address-book" />
+      <Icon icon="angle-down" />
+      <Icon icon="angle-left" />
+      <Icon icon="angle-right" />
+      <Icon icon="angle-up" />
+      <Icon icon="angry" />
+    </div>
+  )
 }
 
 storiesOf("Icon Component", module)
-  .add('icon图标展示', IconFunc)
+  .add('icon图标展示', IconFunc, {
+    notes: md,
+  })
