@@ -1,6 +1,7 @@
 import React, { FC, useState } from 'react';
 import { storiesOf } from '@storybook/react';
 import ScrollList from './scrollList';
+import mdFile from './scrollList.md';
 
 const style = {
   height: "30px",
@@ -52,4 +53,6 @@ const test = () => {
 }
 
 storiesOf("scrollList上拉加载更多", module)
-  .add("上拉到底加载更多", test)
+  .add("上拉到底加载更多", test, {
+    notes: mdFile,
+  })
