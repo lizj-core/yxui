@@ -7,7 +7,7 @@ import Icon from './icon';
 const IconFunc = () => {
   return (
     <div>
-      <Icon icon="address-book" theme="danger" />
+      <Icon icon="address-book" theme="primary" />
       <Icon icon="angle-down" theme="primary" />
       <Icon icon="angle-left" />
       <Icon icon="angle-right" />
