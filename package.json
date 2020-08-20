@@ -30,6 +30,7 @@
     "@fortawesome/react-fontawesome": "^0.1.11",
     "axios": "^0.19.1",
     "classnames": "^2.2.6",
+    "conventional-changelog-cli": "^2.1.0",
     "rc-dialog": "^8.1.0",
     "react-infinite-scroll-component": "^5.0.5",
     "react-transition-group": "^4.3.0"
@@ -51,7 +52,8 @@
     "storybook": "start-storybook -p 9009 -s public ",
     "build-storybook": "build-storybook -s public",
     "prepublishOnly": "npm run test:nowatch && npm run lint && npm run build",
-    "commit": "git cz"
+    "commit": "git cz",
+    "genlog": "conventional-changelog -p angular -i CHANGELOG.md -s"
   },
   "husky": {
     "hooks": {
