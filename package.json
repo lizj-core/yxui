@@ -1,6 +1,6 @@
 {
   "name": "yuexun-ui",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "React components library",
   "author": "lzj",
   "private": false,
@@ -29,6 +29,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.14.0",
     "@fortawesome/react-fontawesome": "^0.1.11",
     "axios": "^0.19.1",
+    "braft-editor": "^2.3.9",
     "classnames": "^2.2.6",
     "conventional-changelog-cli": "^2.1.0",
     "rc-dialog": "^8.1.0",
@@ -90,6 +91,7 @@
     "@storybook/react": "^5.2.8",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
+    "@types/braft-editor": "^2.2.0",
     "@types/classnames": "^2.2.9",
     "@types/jest": "24.0.23",
     "@types/node": "12.12.14",
