@@ -54,7 +54,7 @@
     "build-storybook": "build-storybook -s public",
     "prepublishOnly": "npm run test:nowatch && npm run lint && npm run build",
     "commit": "git cz",
-    "genlog": "conventional-changelog -p angular -i CHANGELOG.md -s"
+    "changelog": "conventional-changelog -p angular -i ./src/WELCOME.md -s"
   },
   "husky": {
     "hooks": {
