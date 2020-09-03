@@ -5,7 +5,7 @@
 
 
 
-### 安装组件库试试
+### 安装组件库
 
 ~~~javascript
 npm install yuexun-ui --save
@@ -36,4 +36,22 @@ npm run build
 npm run publish
 ~~~
 
-- [change-log](CHANGELOG.md)
+## 🔗常用文档收集
+> 开新页需要 ctrl+点击
+
+- [Change Log](CHANGELOG.md)
+- [Ant Design V4](https://ant.design/docs/react/introduce-cn)
+- [Ant Design V3](https://3x.ant.design/docs/react/introduce-cn)
+- [Ant Design Pro](http://pro.ant.design/)
+- [Ant Design Charts](https://charts.ant.design)
+- [Motion](https://motion.ant.design)
+- [IconFont 图标](https://www.iconfont.cn/)
+
+## 问题
+**yuexun-ui发布到公司私服，因此npm需切换到公司私服源再npm install yuexun-ui --save**
+
+~~~core
+    npm config set registry=http://192.168.10.200:7001
+~~~
+
+> 公司私服预览地址http://192.168.10.200:7002
