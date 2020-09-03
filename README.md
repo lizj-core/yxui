@@ -1,11 +1,3 @@
-## 1.0.4 (2020-08-27)
-
-
-### Features
-
-* 新增富文本框编辑器组件 ([53cd66b](https://github.com/lizj-core/yxui/commit/53cd66b010818772431e7a91fecfc1aafe3137fb))
-
-
 
 
 
@@ -43,3 +35,5 @@ npm run build
 //发布到 npm
 npm run publish
 ~~~
+
+- [change-log](CHANGELOG.md)
