@@ -5,7 +5,7 @@
 
 
 
-### 安装组件库
+<!-- ### 安装组件库
 
 ~~~javascript
 npm install yuexun-ui --save
@@ -18,7 +18,7 @@ npm install yuexun-ui --save
 import 'yuexun-ui/dist/index.css'
 // 引入组件
 import { Button } from 'yuexun-ui'
-~~~
+~~~ -->
 
 ### 一些本地开发命令
 
@@ -47,11 +47,11 @@ npm run publish
 - [Motion](https://motion.ant.design)
 - [IconFont 图标](https://www.iconfont.cn/)
 
-## 问题
+<!-- ## 问题
 **yuexun-ui发布到公司私服，因此npm需切换到公司私服源再npm install yuexun-ui --save**
 
 ~~~core
     npm config set registry=http://192.168.10.200:7001
 ~~~
 
-> 公司私服预览地址http://192.168.10.200:7002
+> 公司私服预览地址http://192.168.10.200:7002 -->
