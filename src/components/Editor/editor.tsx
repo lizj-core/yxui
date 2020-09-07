@@ -8,6 +8,8 @@ import Upload from '../Upload/upload';
 interface EditorProps {
   value?: string;
   onChange?: (value: string) => void;
+   /** 文本提示文案 */
+  placeholder?: string;
 }
 
 const extendControls = [
@@ -41,6 +43,7 @@ export const Editor: FC<EditorProps> = (props) => {
   const {
     value,
     onChange,
+    placeholder,
   } = props;
   const [editorState, setEditorState] = useState(BraftEditor.createEditorState(value || null))
   
@@ -55,6 +58,8 @@ export const Editor: FC<EditorProps> = (props) => {
     <BraftEditor 
       value={editorState}
       onChange={handleEditorChange}
+      className="yxui-editor"
+      placeholder={placeholder}
       // extendControls={extendControls}
     />
   )
