@@ -1,12 +1,34 @@
 import React, { FC,useState } from 'react';
 import classNames from 'classnames';
+import RightCol from './RightLayout/rightCol';
+
+interface Obj {
+    colCount: number | string;
+    componentList: Array<Object>;
+}
 
 const RightContainer: FC = (props) => {
-    const [active, setActive] = useState(false)
+    const [active, setActive] = useState(false);
+    const [data, setData] = useState(Array<Obj>());
+
     const onDrop = (e: any) => {
         setActive(false);
-        console.log('onDrop', e.dataTransfer.getData('test'));
-        
+        const layout = e.dataTransfer.getData('layout');
+
+        if(layout) {
+            const componentList = [];
+            for(let i = 0; i < layout; i++) {
+                componentList.push({
+                    sortCode: i+1,
+                })
+            }
+            const obj: Obj = {
+                colCount: Number(layout),
+                componentList: componentList,
+            }
+            data.push(obj)
+            setData(data);
+        }
     }
 
     const onDragOver = (e: any) => {
@@ -14,7 +36,7 @@ const RightContainer: FC = (props) => {
         setActive(true);
         // console.log('onDragOver', e.target);
     }
-
+    
     return (
         <div 
             className={classNames('container', {
@@ -24,7 +46,12 @@ const RightContainer: FC = (props) => {
             onDrop={(e) => onDrop(e)} 
             onDragOver={(e) => onDragOver(e)} 
         >
-
+            {data.map((item, index) => {
+                const { colCount, componentList } = item;
+                return (
+                    <RightCol key={index} componentList={componentList} />
+                )
+            })}
          </div>
     )
 }

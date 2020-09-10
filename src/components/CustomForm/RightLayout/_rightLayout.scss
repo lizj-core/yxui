@@ -1,0 +1,14 @@
+.yxui-custom-right{
+    min-height: 100px;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 10px;
+    display: flex;
+    
+    .item{
+        flex-wrap: nowrap; 
+        width: 100%;
+    }
+    .item:not(:last-child){
+        border-right: 1px solid #e0e0e0;
+    }
+}
