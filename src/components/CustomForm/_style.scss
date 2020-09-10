@@ -1,0 +1,59 @@
+.yxui-CustomForm{
+    display: flex;
+    .leftMenu{
+        width: 200px;
+        margin-right: 20px;
+        border: 1px solid #e0e0e0;
+        .left-menu-header{
+            height: 32px;
+            line-height: 32px;
+            padding-left: 10px;
+            background-color: #e0e0e0;
+            position: relative;
+            cursor: pointer;
+        }
+        .left-menu-body {
+            padding: 10px;
+            .column{
+                border: 1px solid #e0e0e0;
+                margin-bottom: 10px;
+                height: 30px;
+            }
+            // .one-column{
+            // }
+            .two-column{
+                div:not(:last-child){
+                    height: 30px;
+                    width: 50%;
+                    display: inline-block;
+                    border-right: 1px solid #e0e0e0;
+                }
+            
+            }
+            .three-column{
+                div:not(:last-child){
+                    height: 30px;
+                    width: 33.3%;
+                    display: inline-block;
+                    border-right: 1px solid #e0e0e0;
+                }
+            
+            }
+            .active{
+                border: 1px #3399CC dashed;
+                background-color: #99CCFF;
+            }
+        }
+    }
+    .rightContainer{
+        flex: 1;
+        border: 1px solid #e0e0e0;
+        padding: 10px;
+        .container{
+            min-height: 200px;
+        }
+        .active{
+            border: 1px #3399CC dashed;
+        }
+    }
+}

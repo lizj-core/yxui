@@ -9,7 +9,7 @@ const wrapperStyle: React.CSSProperties = {
   padding: '20px 40px'
 }
 
-console.log(process)
+// console.log(process)
 
 const storyWrapper = (stroyFn: any) => (
   <div style={wrapperStyle}>
