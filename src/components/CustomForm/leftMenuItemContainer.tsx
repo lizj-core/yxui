@@ -1,5 +1,6 @@
 import React, { FC, useState } from 'react';
 import classNames from 'classnames';
+import { useEventEmitter } from '../../hooks/useEventEmitter'
 
 interface LeftMenuContainerProps {
     className?: string;
@@ -8,7 +9,7 @@ interface LeftMenuContainerProps {
 
 const LeftMenuContainer: FC<LeftMenuContainerProps> = (props) => {
     const { children, className, layout } = props;
-
+    const { emit } = useEventEmitter();
     const [active, setActive] = useState(false);
 
     const onDragstart = (e: any) => {
@@ -23,7 +24,14 @@ const LeftMenuContainer: FC<LeftMenuContainerProps> = (props) => {
 
     const onDragEnd = (e: any) => {
         setActive(false);
+        emit('leftOnDragEnd', 'deee')
     }
+
+    const onDragLeave = (e: any) => {
+        setActive(false);
+        console.log("onDragLeave")
+    }
+    
 
     return (
         <div
@@ -35,6 +43,7 @@ const LeftMenuContainer: FC<LeftMenuContainerProps> = (props) => {
             onDragStart={(e) => onDragstart(e)}
             onDragEnd={(e) => onDragEnd(e)}
             onDrag={(e) => onDrag(e)}
+            onDragLeave={(e) => onDragLeave(e)}
         >
             {children}
         </div>

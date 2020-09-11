@@ -11,7 +11,7 @@ const RightCol: FC<ItemObject> = (props) => {
     const { componentList } = props;
     console.log(props)
     return (
-        <div className={classNames('yxui-custom-right')}>
+        <div className={classNames('yxui-custom-right')} draggable>
             {componentList.map((component, index) => {
                 return <RightColItem key={index} component={component} ></RightColItem>
             })}

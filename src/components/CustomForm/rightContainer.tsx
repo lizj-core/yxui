@@ -1,6 +1,7 @@
-import React, { FC,useState } from 'react';
+import React, { FC,useState,useEffect } from 'react';
 import classNames from 'classnames';
 import RightCol from './RightLayout/rightCol';
+import { useEventEmitter } from '../../hooks/useEventEmitter'
 
 interface Obj {
     colCount: number | string;
@@ -10,7 +11,12 @@ interface Obj {
 const RightContainer: FC = (props) => {
     const [active, setActive] = useState(false);
     const [data, setData] = useState(Array<Obj>());
-
+    const { useListener } = useEventEmitter();
+    
+    useListener('leftOnDragEnd', () => {  
+        setActive(false);
+    }, [active])
+   
     const onDrop = (e: any) => {
         setActive(false);
         const layout = e.dataTransfer.getData('layout');
@@ -36,15 +42,19 @@ const RightContainer: FC = (props) => {
         setActive(true);
         // console.log('onDragOver', e.target);
     }
+
+    const onDragEnd = (e: any) => {
+        setActive(false);
+    } 
     
     return (
         <div 
             className={classNames('container', {
                 [`active`]: active
             })}
-            draggable
             onDrop={(e) => onDrop(e)} 
             onDragOver={(e) => onDragOver(e)} 
+            onDragEnd={(e) => onDragEnd(e)}
         >
             {data.map((item, index) => {
                 const { colCount, componentList } = item;
