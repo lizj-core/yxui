@@ -1,11 +1,15 @@
-import React, { FC,useState,useEffect } from 'react';
+import React, { FC,useState } from 'react';
 import classNames from 'classnames';
 import RightCol from './RightLayout/rightCol';
 import { useEventEmitter } from '../../hooks/useEventEmitter'
 
+interface ComponentListObj {
+    sortCode: number;
+}
+
 interface Obj {
     colCount: number | string;
-    componentList: Array<Object>;
+    componentList: Array<ComponentListObj>;
 }
 
 const RightContainer: FC = (props) => {
@@ -43,7 +47,7 @@ const RightContainer: FC = (props) => {
         // console.log('onDragOver', e.target);
     }
 
-    const onDragEnd = (e: any) => {
+    const onDragEnd = () => {
         setActive(false);
     } 
     
@@ -54,10 +58,10 @@ const RightContainer: FC = (props) => {
             })}
             onDrop={(e) => onDrop(e)} 
             onDragOver={(e) => onDragOver(e)} 
-            onDragEnd={(e) => onDragEnd(e)}
+            onDragEnd={() => onDragEnd()}
         >
             {data.map((item, index) => {
-                const { colCount, componentList } = item;
+                const { componentList } = item;
                 return (
                     <RightCol key={index} componentList={componentList} />
                 )

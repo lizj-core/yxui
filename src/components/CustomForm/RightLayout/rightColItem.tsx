@@ -1,19 +1,16 @@
 import React, { FC } from 'react';
 import classNames from 'classnames';
 
-interface ItemObject {
+interface RightColItemProps {
+    component: Object;
     sortCode: number;
 }
 
-interface RightColItemProps {
-    component: Object;
-}
-
 const RightColItem: FC<RightColItemProps> = (props) => {
-    const { component } = props;
+    const { sortCode } = props;
     return (
         <div className={classNames('item')}>
-            模块
+            模块{ sortCode }
         </div>
     )
 }

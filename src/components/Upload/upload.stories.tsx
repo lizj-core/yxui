@@ -2,6 +2,7 @@ import React  from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 import { Upload } from './upload'
+import fsUtils from '../../utils/fsUtils';
 //import Button from '../Button/button'
 import Icon from '../Icon/icon'
 // const defaultFileList: UploadFile[] = [
@@ -23,7 +24,7 @@ import Icon from '../Icon/icon'
 const SimpleUpload = () => {
   return (
     <Upload
-      action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
+      action={fsUtils.getFileUploadAddress()}
       onChange={action('changed')}
       onRemove={action('removed')}
       name="fileName"

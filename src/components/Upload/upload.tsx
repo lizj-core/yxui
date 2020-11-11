@@ -126,7 +126,7 @@ export const Upload: FC<UploadProps> = (props) => {
     axios.post(action, formData, {
       headers: {
         ...headers,
-        'Content-Type': 'multipart/form-data'
+        'Content-Type': 'multipart/form-data',
       },
       withCredentials,
       onUploadProgress: (e) => {

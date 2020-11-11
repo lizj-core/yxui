@@ -22,8 +22,8 @@ const PictureListItem: FC<PictureListItemProps> = (props) => {
     }
   }
 
-  const handleClosePreview = (e: SyntheticEvent<HTMLDivElement, Event>) => {
-    e.stopPropagation();
+  const handleClosePreview = () => {
+    // e.stopPropagation();
     setPictureVisible(false);
   }
   console.log(pictureVisible);
@@ -35,7 +35,7 @@ const PictureListItem: FC<PictureListItemProps> = (props) => {
         <Dialog 
           visible={pictureVisible}
           title="图片预览"
-          onClose={(e) => handleClosePreview(e)}
+          onClose={() => handleClosePreview()}
         >
           <div style={{textAlign:'center'}}>
             <img src={previewUrl} alt="" />
