@@ -1,22 +1,17 @@
-import React from 'react'
-import { storiesOf } from '@storybook/react'
-import { action } from '@storybook/addon-actions'
-import Menu from './menu'
-import MenuItem from './menuItem'
+import React from 'react';
 
-export const defaultMenu = () => (
-  <Menu defaultIndex='0' onSelect={(index) => {action(`clicked ${index} item`)}} >
-    <MenuItem>
-      cool link
-    </MenuItem>
-    <MenuItem disabled>
-      disabled
-    </MenuItem> 
-    <MenuItem>
-      cool link 2
-    </MenuItem> 
-  </Menu>
+import { storiesOf } from '@storybook/react';
+import Menu from './menu';
+import MenuItem from './menuItem';
+
+const defaultMenu =() => (
+    <Menu onSelected={(index) => alert(index)} mode="vertical">
+        <MenuItem index={0}>dddd</MenuItem>
+        <MenuItem index={1} disabled>dddd</MenuItem>
+        <MenuItem index={2}>dddd</MenuItem>
+
+    </Menu>
 )
 
-storiesOf('Menu Component', module)
-.add('Menu', defaultMenu )
+storiesOf('Menu组件', module)
+    .add("默认", defaultMenu)

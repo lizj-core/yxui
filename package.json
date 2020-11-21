@@ -25,6 +25,7 @@
     "dist/index.css"
   ],
   "dependencies": {
+    "@ant-design/icons": "^4.2.2",
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
     "@fortawesome/free-solid-svg-icons": "^5.14.0",
     "@fortawesome/react-fontawesome": "^0.1.11",
@@ -112,5 +113,11 @@
     "react-scripts": "3.2.0",
     "rimraf": "^3.0.1",
     "typescript": "3.7.2"
-  }
+  },
+  "proxy":{
+    "/fs/api/":{
+       "target":"http://192.168.10.89/",
+       "changeOrigin": true
+     }
+   }
 }
