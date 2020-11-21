@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { addDecorator, storiesOf } from '@storybook/react'
+import {storiesOf } from '@storybook/react'
 import DialogFileImport from './dialogFileImport';
 import { withKnobs, boolean } from '@storybook/addon-knobs'
 

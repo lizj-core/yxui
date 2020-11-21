@@ -17,13 +17,13 @@ const testVerProps: MenuProps = {
 const renderMenu = (props: MenuProps) => {
     return (
         <Menu {...props}>
-            <MenuItem index={0}>
+            <MenuItem>
                 active
             </MenuItem>
-            <MenuItem index={1} disabled>
+            <MenuItem disabled>
                 disabled
             </MenuItem>
-            <MenuItem index={2}>
+            <MenuItem>
                 sss
             </MenuItem>
         </Menu>
@@ -47,8 +47,8 @@ describe("menu组件和menuItem组件测试", () => {
         fireEvent.click(threeItme);
         expect(threeItme).toHaveClass("is-active");
         expect(activeElement).not.toHaveClass("is-active");
-        fireEvent.click(warpper.getByText("disabled"));
-        expect(warpper.getByText("disabled")).not.toHaveClass("is-active");
+        fireEvent.click(disabledElement);
+        expect(disabledElement).not.toHaveClass("is-active");
     })
     it("竖向组件测试", () => {
         cleanup();

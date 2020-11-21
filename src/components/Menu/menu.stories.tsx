@@ -5,7 +5,7 @@ import Menu from './menu';
 import MenuItem from './menuItem';
 
 const defaultMenu =() => (
-    <Menu onSelected={(index) => alert(index)} mode="vertical">
+    <Menu onSelected={(index) => alert(index)}>
         <MenuItem index={0}>dddd</MenuItem>
         <MenuItem index={1} disabled>dddd</MenuItem>
         <MenuItem index={2}>dddd</MenuItem>
