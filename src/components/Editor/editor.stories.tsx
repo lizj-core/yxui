@@ -7,7 +7,7 @@ import { action } from '@storybook/addon-actions'
 
 const defaultEditor = () => {
   return (
-    <Editor onChange={action('输出内容：')} placeholder="请输入内容" />
+    <Editor style={{height:'100px'}} onChange={action('输出内容：')} placeholder="请输入内容" isNotControls={true} />
   )
 }
 

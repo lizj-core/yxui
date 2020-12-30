@@ -1,6 +1,6 @@
 {
   "name": "yuexun-ui",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "React components library",
   "author": "lzj",
   "private": false,
@@ -113,11 +113,5 @@
     "react-scripts": "3.2.0",
     "rimraf": "^3.0.1",
     "typescript": "3.7.2"
-  },
-  "proxy":{
-    "/fs/api/":{
-       "target":"http://192.168.10.89/",
-       "changeOrigin": true
-     }
-   }
+  }
 }

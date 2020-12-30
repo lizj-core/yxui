@@ -1,4 +1,4 @@
-import React, { FC, useState, SyntheticEvent } from 'react';
+import React, { FC, useState } from 'react';
 import Dialog from 'rc-dialog';
 
 interface PictureListItemProps {
